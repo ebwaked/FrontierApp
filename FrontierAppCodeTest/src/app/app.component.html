@@ -33,13 +33,13 @@
                 <div class="account-container-title" id="active-account-container-title">
                     <h3>Active</h3>
                 </div>
-                <div class="account-container active-account">
+                <div *ngFor='let account of accounts$' class="account-container active-account">
                     <ul class="account-data-list">
-                        <!-- <li><label>Name:</label>{{LastName}}, {{FirstName}}</li>
-                        <li><label>Email:</label>{{Email}}</li>
-                        <li><label>Phone Number:</label>{{PhoneNumber}}</li>
-                        <li><label>Amount Due:</label>{{AmountDue}}</li>
-                        <li><label>Due Date:</label>{{DueDate}}</li> -->
+                        <li><label>Name:</label>{{account.LastName}}, {{account.FirstName}}</li>
+                        <li><label>Email:</label>{{account.Email}}</li>
+                        <li><label>Phone Number:</label>{{account.PhoneNumber}}</li>
+                        <li><label>Amount Due:</label>{{account.AmountDue}}</li>
+                        <li><label>Due Date:</label>{{account.PaymentDueDate}}</li>
                     </ul>
                 </div>
             </section>
@@ -47,13 +47,13 @@
                 <div class="account-container-title" id="overdue-account-container-title">
                     <h3>Overdue</h3>
                 </div>
-                <div class="account-container overdue-account">
+                <div *ngFor='let account of accounts$' class="account-container overdue-account">
                     <ul class="account-data-list">
-                        <!-- <li><label>Name:</label>{{LastName}}, {{FirstName}}</li>
-                        <li><label>Email:</label>{{Email}}</li>
-                        <li><label>Phone Number:</label>{{PhoneNumber}}</li>
-                        <li><label>Amount Due:</label>{{AmountDue}}</li>
-                        <li><label>Due Date:</label>{{DueDate}}</li> -->
+                        <li><label>Name:</label>{{account.LastName}}, {{account.FirstName}}</li>
+                        <li><label>Email:</label>{{account.Email}}</li>
+                        <li><label>Phone Number:</label>{{account.PhoneNumber}}</li>
+                        <li><label>Amount Due:</label>{{account.AmountDue}}</li>
+                        <li><label>Due Date:</label>{{account.PaymentDueDate}}</li>
                     </ul>
                 </div>
             </section>
@@ -61,13 +61,13 @@
                 <div class="account-container-title" id="inactive-account-container-title">
                     <h3>Inactive</h3>
                 </div>
-                <div class="account-container inactive-account">
+                <div *ngFor='let account of accounts$' class="account-container inactive-account">
                     <ul class="account-data-list">
-                        <!-- <li><label>Name:</label>{{LastName}}, {{FirstName}}</li>
-                        <li><label>Email:</label>{{Email}}</li>
-                        <li><label>Phone Number:</label>{{PhoneNumber}}</li>
-                        <li><label>Amount Due:</label>{{AmountDue}}</li>
-                        <li><label>Due Date:</label>{{DueDate}}</li> -->
+                        <li><label>Name:</label>{{account.LastName}}, {{account.FirstName}}</li>
+                        <li><label>Email:</label>{{account.Email}}</li>
+                        <li><label>Phone Number:</label>{{account.PhoneNumber}}</li>
+                        <li><label>Amount Due:</label>{{account.AmountDue}}</li>
+                        <li><label>Due Date:</label>{{account.PaymentDueDate}}</li>
                     </ul>
                 </div>
             </div>
