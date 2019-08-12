@@ -18,7 +18,7 @@
                     <ul class="account-data-list">
                         <li><label>Name:</label>{{account.LastName}}, {{account.FirstName}}</li>
                         <li><label>Email:</label>{{account.Email}}</li>
-                        <li><label>Phone Number:</label>{{account.PhoneNumber}}</li>
+                        <li><label>Phone Number:</label>{{account.PhoneNumber | phone:'US'}}</li>
                         <li><label>Amount Due:</label>{{account.AmountDue | currency}}</li>
                         <li><label>Due Date:</label>{{account.PaymentDueDate | date:shortDate}}</li>
                     </ul>
@@ -28,11 +28,11 @@
                 <div class="account-container-title" id="overdue-account-container-title">
                     <h3>Overdue</h3>
                 </div>
-                <div *ngFor='let account of accounts$ | accountStatusFilter:1' class="account-container overdue-account">
+                <div *ngFor='let account of accounts$ | accountStatusFilter:2' class="account-container overdue-account">
                     <ul class="account-data-list">
                         <li><label>Name:</label>{{account.LastName}}, {{account.FirstName}}</li>
                         <li><label>Email:</label>{{account.Email}}</li>
-                        <li><label>Phone Number:</label>{{account.PhoneNumber}}</li>
+                        <li><label>Phone Number:</label>{{account.PhoneNumber | phone:'US'}}</li>
                         <li><label>Amount Due:</label>{{account.AmountDue | currency}}</li>
                         <li><label>Due Date:</label>{{account.PaymentDueDate | date:shortDate}}</li>
                     </ul>
@@ -42,13 +42,13 @@
                 <div class="account-container-title" id="inactive-account-container-title">
                     <h3>Inactive</h3>
                 </div>
-                <div *ngFor='let account of accounts$ | accountStatusFilter:2' class="account-container inactive-account">
+                <div *ngFor='let account of accounts$ | accountStatusFilter:1' class="account-container inactive-account">
                     <ul class="account-data-list">
                         <li><label>Name:</label>{{account.LastName}}, {{account.FirstName}}</li>
                         <li><label>Email:</label>{{account.Email}}</li>
-                        <li><label>Phone Number:</label>{{account.PhoneNumber}}</li>
+                        <li><label>Phone Number:</label>{{account.PhoneNumber | phone:'US'}}</li>
                         <li><label>Amount Due:</label>{{account.AmountDue | currency}}</li>
-                        <li><label>Due Date:</label>{{account.PaymentDueDate | date:shortDate}}</li>
+                        <li [hidden]="!account.PaymentDueDate"><label>Due Date:</label>{{account.PaymentDueDate | date:shortDate}}</li>
                     </ul>
                 </div>
             </div>

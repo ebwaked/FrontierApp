@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DataService } from './data.service';
-import { AccountStatusFilter } from './app.accountStatusFilter.pipe'
+import { AccountStatusFilter } from './app.accountStatusFilter.pipe';
+import { PhonePipe } from './app.phoneNumFilter.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AccountStatusFilter
+    AccountStatusFilter,
+    PhonePipe
   ],
   imports: [
     BrowserModule,
