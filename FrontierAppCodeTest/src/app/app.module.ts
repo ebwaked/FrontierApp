@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DataService } from './data.service';
-import { AccountStatusFilter } from './app.my-filter.pipe'
+import { AccountStatusFilter } from './app.accountStatusFilter.pipe'
 
 @NgModule({
   declarations: [
